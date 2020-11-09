@@ -1,7 +1,11 @@
 package com.golden.demo.enrollment.service;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.golden.demo.enrollment.entity.Enrollee;
 import com.golden.demo.enrollment.repo.EnrollmentRepo;
@@ -10,7 +14,7 @@ import com.golden.demo.exception.PersonNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
-//XXX @Transaction
+@Transactional(propagation=Propagation.SUPPORTS)
 @Slf4j
 public class EnrollmentService {
 	
@@ -27,7 +31,7 @@ public class EnrollmentService {
 
 
     public Enrollee create(@RequestBody Enrollee person) {   	
-    	//validate(person); XXX
+    	//validate(person); 
         return enrollmentRepo.save(person);
     }
  
@@ -36,6 +40,8 @@ public class EnrollmentService {
     }
     
 
+    
+    @Transactional(propagation=Propagation.REQUIRED)
     public Enrollee update(@RequestBody Enrollee person, long id) throws PersonNotFoundException {
         Enrollee dbPerson = enrollmentRepo.findById(id).orElseThrow(PersonNotFoundException::new);
         
