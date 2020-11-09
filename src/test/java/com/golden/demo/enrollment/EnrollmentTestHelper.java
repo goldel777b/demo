@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.golden.demo.enrollment.entity.AbstractPerson;
 import com.golden.demo.enrollment.entity.Dependent;
 import com.golden.demo.enrollment.entity.Enrollee;
+import com.golden.demo.enrollment.exception.PersonNotFoundException;
 import com.golden.demo.enrollment.service.EnrollmentService;
-import com.golden.demo.exception.PersonNotFoundException;
 
 import lombok.extern.slf4j.Slf4j;
 

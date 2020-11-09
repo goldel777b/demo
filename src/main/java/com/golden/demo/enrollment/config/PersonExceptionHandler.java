@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.golden.demo.exception.PersonNotFoundException;
+import com.golden.demo.enrollment.exception.PersonNotFoundException;
 
 @ControllerAdvice
 public class PersonExceptionHandler extends ResponseEntityExceptionHandler {

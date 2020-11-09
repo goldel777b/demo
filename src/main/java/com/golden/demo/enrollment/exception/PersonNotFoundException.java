@@ -1,4 +1,4 @@
-package com.golden.demo.exception;
+package com.golden.demo.enrollment.exception;
 
 import java.io.Serializable;
 

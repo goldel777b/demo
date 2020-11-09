@@ -14,7 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.golden.demo.enrollment.entity.Enrollee;
-import com.golden.demo.exception.PersonNotFoundException;
+import com.golden.demo.enrollment.exception.PersonNotFoundException;
 
 import lombok.extern.slf4j.Slf4j;
 

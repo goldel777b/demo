@@ -23,8 +23,8 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.golden.demo.enrollment.dto.EnrolleeDTO;
 import com.golden.demo.enrollment.entity.Enrollee;
+import com.golden.demo.enrollment.exception.PersonNotFoundException;
 import com.golden.demo.enrollment.service.EnrollmentService;
-import com.golden.demo.exception.PersonNotFoundException;
 
 import lombok.extern.slf4j.Slf4j;
 

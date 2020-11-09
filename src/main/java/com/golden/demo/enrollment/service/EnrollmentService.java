@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.golden.demo.enrollment.entity.Enrollee;
+import com.golden.demo.enrollment.exception.PersonNotFoundException;
 import com.golden.demo.enrollment.repo.EnrollmentRepo;
-import com.golden.demo.exception.PersonNotFoundException;
 
 import lombok.extern.slf4j.Slf4j;
 
