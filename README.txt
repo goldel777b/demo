@@ -20,11 +20,14 @@ Enrollee example without dependents
 
 {
 	"id":1000,
-	"firstName":"Mary",
+	"firstName": "Mary",
 	"middleName":"Jane",
-	"lastName":"Doe",
-	"birthDate":{"year":2020,"month":"NOVEMBER","dayOfMonth":8},
-	"dbVersion":1,"phone":"919-555-1212",
+	"lastName":  "Doe",
+	"birthYear": 2020,
+	"birthMonth": 11,
+	"birthDayOfMonth": 8,
+	"dbVersion":1,
+	"phone":     "919-555-1212",
 	"active":true,
 	"dependents":null
 }
@@ -36,7 +39,9 @@ Enrollee with dependents
 	"firstName":"Mary",
 	"middleName":"Jane",
 	"lastName":"Doe",
-	"birthDate":{"year":2020,"month":"NOVEMBER","dayOfMonth":8},
+	"birthYear": 2020,
+	"birthMonth": 11,
+	"birthDayOfMonth": 8,
 	"dbVersion":1,
 	"phone":"919-555-1212",
 	"active":true,
@@ -46,13 +51,14 @@ Enrollee with dependents
 			"firstName":"Baby",
 			"middleName":"Jane",
 			"lastName":"Doe",
-			"birthDate":{"year":2020,"month":"NOVEMBER","dayOfMonth":8},
+			"birthYear": 2020,
+			"birthMonth": 11,
+			"birthDayOfMonth": 8,
 		    "dbVersion":1}
     ]
 }
 
 
-ResultingJSONstring = {"id":1000,"firstName":"Mary","middleName":"Jane","lastName":"Doe","birthDate":{"year":2020,"month":"NOVEMBER","dayOfWeek":"SUNDAY","dayOfYear":313,"era":"CE","leapYear":true,"monthValue":11,"dayOfMonth":8,"chronology":{"id":"ISO","calendarType":"iso8601"}},"dbVersion":1,"phone":"919-555-1212","active":true,
 
 There is no CORS, CSRF etc - See SecurityConfig to update
 There is no SSO authentication
