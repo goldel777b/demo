@@ -17,7 +17,6 @@ public class Dependent extends AbstractPerson implements Comparable<AbstractPers
 
 	@Override
 	public int compareTo(AbstractPerson other) {
-		//return Long.valueOf(id).compareTo(other.getId());
 		return super.compareTo(other);
 	}
 }

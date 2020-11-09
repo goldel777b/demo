@@ -29,15 +29,15 @@ public abstract class AbstractPerson implements Comparable<AbstractPerson> {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @EqualsAndHashCode.Include
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private long id;
     
     @Column(nullable = false)
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private  String firstName; 
     
     @Column(nullable = false)
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private  String middleName; 
     
     @Column(nullable = false)
@@ -45,20 +45,20 @@ public abstract class AbstractPerson implements Comparable<AbstractPerson> {
     private  String lastName; 
     
     @Column(nullable = false)
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private int birthYear;
     
     @Column(nullable = false)
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private int birthMonth;
     
     @Column(nullable = false)
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private int birthDayOfMonth;
     
     @Column(nullable = false)	 
     //@Version 
-    //@JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     protected long dbVersion;
     
 	@Override

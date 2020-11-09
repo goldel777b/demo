@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @Slf4j
-//@ActiveProfiles("test")
+@ActiveProfiles("test")
 //@AutoConfigureTestDatabase(replace = Replace.ANY)
 //@TestPropertySource(locations="classpath:application-test.properties")
 public class EnrollmentContollerTest extends EnrollmentTestHelper {

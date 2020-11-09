@@ -28,17 +28,16 @@ public class Enrollee extends AbstractPerson implements Comparable<AbstractPerso
     private String phone;
     
     @Column(nullable = true)
-    //@JsonView(value = EnrolleeDTO.class)
+    @JsonView(value = EnrolleeDTO.class)
     private boolean active;
     
     @OneToMany(cascade = CascadeType.ALL)
-    //@JsonView(value = EnrolleeDTO.class)
+    @JsonView(value = EnrolleeDTO.class)
     private Set<Dependent> dependents;
     
     
 	@Override
 	public int compareTo(AbstractPerson other) {
-		//return Long.valueOf(id).compareTo(other.getId());
 		return super.compareTo(other);
 	}
     
