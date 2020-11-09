@@ -41,7 +41,7 @@ public abstract class AbstractPerson implements Comparable<AbstractPerson> {
     private  String middleName; 
     
     @Column(nullable = false)
-   // @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
+    @JsonView(value = { EnrolleeDTO.class, DependentDTO.class })
     private  String lastName; 
     
     @Column(nullable = false)

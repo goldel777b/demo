@@ -12,8 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 
@@ -32,6 +35,11 @@ public class EnrollmentContollerTest extends EnrollmentTestHelper {
 	
 	private final static String API = "http://localhost:%d/golden/enrollment";
 	
+
+    @Autowired
+    private EnrollmentController enrollmentController;
+
+	
 	@LocalServerPort
 	private int port;
 	
@@ -44,8 +52,8 @@ public class EnrollmentContollerTest extends EnrollmentTestHelper {
 	@Autowired
 	private HomeController homeController;
 	
-	@Autowired
-	private EnrollmentController enrollmentController;
+	//@Autowired
+	//private EnrollmentController enrollmentController;
 
 
 	
@@ -78,6 +86,7 @@ public class EnrollmentContollerTest extends EnrollmentTestHelper {
 		ResponseEntity<Enrollee> response2 = restTemplate.getForEntity(url2, Enrollee.class);
 		Enrollee personResponse2  = response2.getBody();
 		
+		log.debug(String.format("PERSON=%s", person));
 		log.debug(String.format("RESPONSE=%s", response));
 		log.debug(String.format("url2=%s RESPONSE2=%s",url2, response2));
 				

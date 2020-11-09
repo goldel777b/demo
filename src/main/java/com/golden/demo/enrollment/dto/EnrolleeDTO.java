@@ -8,21 +8,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 
-@Data
-@ToString(callSuper=true)
-@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper=true)
-// fields for junit testing
-public class EnrolleeDTO extends AbstractPersonDTO implements Comparable<AbstractPersonDTO> {
+public class EnrolleeDTO {
 
-    private String phone;
 
-    private boolean active;
-    
-    private Set<Dependent> dependents;
-    
-    
-	@Override
-	public int compareTo(AbstractPersonDTO other) {;
-		return super.compareTo(other);
-	}
 }
